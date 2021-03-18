@@ -1,11 +1,11 @@
-package com.zemoga.portafolio;
+package com.zemoga.portfolio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PortafolioApplication {
+public class PortfolioApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(PortafolioApplication.class, args);
+		SpringApplication.run(PortfolioApplication.class, args);
 	}
 }

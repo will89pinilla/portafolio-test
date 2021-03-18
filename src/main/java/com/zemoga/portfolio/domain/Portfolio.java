@@ -1,17 +1,20 @@
-package com.zemoga.portafolio.domain;
+package com.zemoga.portfolio.domain;
 
-import lombok.*;
-
-import javax.persistence.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.ToString;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @RequiredArgsConstructor
 @Getter
 @ToString
 @EqualsAndHashCode
 @Entity
-@Builder
-@Table(name = "portfolio")
-public final class Portafolio {
+public final class Portfolio {
 
     @Id
     @GeneratedValue
@@ -30,10 +33,8 @@ public final class Portafolio {
     @Column(name = "title")
     private final String title;
 
-
-
     //Empty constructor for JSON / JPA
-    public Portafolio() {
+    public Portfolio() {
         this(null, null, null, null, null);
     }
 }
