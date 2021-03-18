@@ -1,6 +1,0 @@
-com/zemoga/portafolio/PortafolioApplication.java
- com.zemoga.portafolio.PortafolioApplication
-com/zemoga/portafolio/domain/Profile.java
- com.zemoga.portafolio.domain.Profile
-com/zemoga/portafolio/repository/ProfileRepository.java
- com.zemoga.portafolio.repository.ProfileRepository
