@@ -4,7 +4,6 @@ import com.zemoga.portfolio.service.contract.TwitterTimelineService;
 import org.springframework.social.twitter.api.Tweet;
 import org.springframework.social.twitter.api.Twitter;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -12,7 +11,7 @@ public class TwitterTimelineServerImpl implements TwitterTimelineService {
 
     private final Twitter twitter;
 
-    public TwitterTimelineServerImpl(final Twitter twitter) {
+    TwitterTimelineServerImpl(final Twitter twitter) {
         this.twitter = twitter;
     }
 

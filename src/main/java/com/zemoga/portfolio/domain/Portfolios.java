@@ -8,13 +8,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @RequiredArgsConstructor
 @Getter
 @ToString
 @EqualsAndHashCode
 @Entity
-public final class Portfolio {
+@Table(name = "portfolio")
+public final class Portfolios {
 
     @Id
     @GeneratedValue
@@ -33,8 +35,8 @@ public final class Portfolio {
     @Column(name = "title")
     private final String title;
 
-    //Empty constructor for JSON / JPA
-    public Portfolio() {
+    //Empty constructor for JPA
+    public Portfolios() {
         this(null, null, null, null, null);
     }
 }
