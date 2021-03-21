@@ -10,13 +10,13 @@ public final class TransformerDTO {
     private TransformerDTO(){}
 
     public static Portfolio transform(final Portafolio portfolio){
-        return portfolio !=  null ? Portfolio.builder()
+        return Portfolio.builder()
                 .id(portfolio.getId())
                 .description(portfolio.getDescription())
                 .imageUrl(portfolio.getImageUrl())
                 .title(portfolio.getTitle())
                 .twitterUserName(portfolio.getTwitterUserName())
-                .build() : null;
+                .build();
     }
 
     public static Portafolio transform(final Portafolio portafolio, final Portfolio portfolio){
@@ -30,9 +30,9 @@ public final class TransformerDTO {
     }
 
     public static TwtTweet transform(final Tweet tweet){
-        return tweet != null ? TwtTweet.builder()
+        return TwtTweet.builder()
                 .text(tweet.getText())
                 .createdAt(tweet.getCreatedAt())
-                .build() : null;
+                .build();
     }
 }

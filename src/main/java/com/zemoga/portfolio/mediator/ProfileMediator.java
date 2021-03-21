@@ -53,13 +53,13 @@ public class ProfileMediator implements PortfolioTweetsMediator {
         return twitterTimelineService.pullTweetsByUser(twitterUser).stream()
                 .sorted(Comparator.comparing(Tweet::getCreatedAt).reversed())
                 .map(TransformerDTO::transform)
-                .filter(Objects::nonNull)
                 .limit(maxTweetsNumber)
                 .collect(Collectors.toList());
     }
 
     @Override
     public Portfolio updatePortfolio(final Long id, Portfolio portfolio) {
-        return transform(portfolioService.update(transform(portfolioService.getByUser(id),portfolio)));
+        return transform(portfolioService
+                .update(transform(portfolioService.getByUser(id),portfolio)));
     }
 }

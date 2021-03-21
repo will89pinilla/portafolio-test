@@ -36,7 +36,7 @@ class PortfolioController {
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<Portfolio> partialUpdateName(@PathVariable final Long id, final @RequestBody Portfolio portfolio) {
+    ResponseEntity<Portfolio> partialUpdateName(@PathVariable final Long id, final @RequestBody Portfolio portfolio) {
         return ResponseEntity.ok(portfolioTweetMediator.updatePortfolio(id,portfolio));
     }
 }
