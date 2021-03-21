@@ -111,6 +111,7 @@ $(document).ready(function() {
     });
 
     $('#editProfileModal').on('shown.bs.modal', function () {
+        $('#notification').empty();
         setFormPortfolioModal();
     });
 
