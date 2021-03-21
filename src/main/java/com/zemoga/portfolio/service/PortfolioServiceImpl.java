@@ -1,6 +1,6 @@
 package com.zemoga.portfolio.service;
 
-import com.zemoga.portfolio.domain.Portfolios;
+import com.zemoga.portfolio.domain.Portafolio;
 import com.zemoga.portfolio.exception.PortfolioNotFoundException;
 import com.zemoga.portfolio.repository.PortfolioRepository;
 import com.zemoga.portfolio.service.contract.PortfolioService;
@@ -18,13 +18,19 @@ class PortfolioServiceImpl implements PortfolioService {
     }
 
     @Override
-    public Portfolios getByUser(final Long id) {
+    public Portafolio getByUser(final Long id) {
         return portfolioRepository.findById(id)
                 .orElseThrow(() -> new PortfolioNotFoundException(id));
     }
 
     @Override
-    public List<Portfolios> getAllItems() {
+    public List<Portafolio> getAllItems() {
         return portfolioRepository.findAll();
     }
+
+    @Override
+    public Portafolio update(final Portafolio portafolio) {
+        return portfolioRepository.save(portafolio);
+    }
+
 }

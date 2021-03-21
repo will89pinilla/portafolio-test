@@ -1,20 +1,19 @@
-com/zemoga/portfolio/service/contract/ProfileService.java
- com.zemoga.portfolio.service.contract.ProfileService
+com/zemoga/portfolio/domain/Portafolio.java
+ com.zemoga.portfolio.domain.Portafolio
+ com.zemoga.portfolio.domain.Portafolio$PortafolioBuilder
 com/zemoga/portfolio/PortfolioApplication.java
  com.zemoga.portfolio.PortfolioApplication
 com/zemoga/portfolio/configuration/TwitterConfiguration.java
  com.zemoga.portfolio.configuration.TwitterConfiguration
-com/zemoga/portfolio/domain/Portfolios.java
- com.zemoga.portfolio.domain.Portfolios
 com/zemoga/portfolio/dto/Portfolio.java
  com.zemoga.portfolio.dto.Portfolio
  com.zemoga.portfolio.dto.Portfolio$PortfolioBuilder
+com/zemoga/portfolio/mediator/contract/PortfolioTweetsMediator.java
+ com.zemoga.portfolio.mediator.contract.PortfolioTweetsMediator
 com/zemoga/portfolio/service/contract/TwitterTimelineService.java
  com.zemoga.portfolio.service.contract.TwitterTimelineService
 com/zemoga/portfolio/service/contract/PortfolioService.java
  com.zemoga.portfolio.service.contract.PortfolioService
-com/zemoga/portfolio/mediator/ProfileTweetsMediator.java
- com.zemoga.portfolio.mediator.ProfileTweetsMediator
 com/zemoga/portfolio/dto/Profile.java
  com.zemoga.portfolio.dto.Profile
  com.zemoga.portfolio.dto.Profile$ProfileBuilder
@@ -24,10 +23,10 @@ com/zemoga/portfolio/service/PortfolioServiceImpl.java
  com.zemoga.portfolio.service.PortfolioServiceImpl
 com/zemoga/portfolio/repository/PortfolioRepository.java
  com.zemoga.portfolio.repository.PortfolioRepository
-com/zemoga/portfolio/mediator/contract/Mediator.java
- com.zemoga.portfolio.mediator.contract.Mediator
 com/zemoga/portfolio/utils/TransformerDTO.java
  com.zemoga.portfolio.utils.TransformerDTO
+com/zemoga/portfolio/mediator/ProfileMediator.java
+ com.zemoga.portfolio.mediator.ProfileMediator
 com/zemoga/portfolio/controller/PortfolioController.java
  com.zemoga.portfolio.controller.PortfolioController
 com/zemoga/portfolio/dto/TwtTweet.java

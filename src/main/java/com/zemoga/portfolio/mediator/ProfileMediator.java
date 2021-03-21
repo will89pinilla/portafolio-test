@@ -18,14 +18,14 @@ import java.util.stream.Collectors;
 import static com.zemoga.portfolio.utils.TransformerDTO.transform;
 
 @Component
-public class ProfileTweetsPortfolioTweetsMediator implements PortfolioTweetsMediator {
+public class ProfileMediator implements PortfolioTweetsMediator {
 
     private final PortfolioService portfolioService;
     private final TwitterTimelineService twitterTimelineService;
     private final Integer maxTweetsNumber;
 
-    public ProfileTweetsPortfolioTweetsMediator(PortfolioService portfolioService, TwitterTimelineService twitterTimelineService,
-                                                Integer maxTweetsNumber) {
+    public ProfileMediator(PortfolioService portfolioService, TwitterTimelineService twitterTimelineService,
+                           Integer maxTweetsNumber) {
         this.portfolioService = portfolioService;
         this.twitterTimelineService = twitterTimelineService;
         this.maxTweetsNumber = maxTweetsNumber;
@@ -49,7 +49,7 @@ public class ProfileTweetsPortfolioTweetsMediator implements PortfolioTweetsMedi
                 .build();
     }
 
-    private List<TwtTweet> getTweets(String twitterUser) {
+    private List<TwtTweet> getTweets(final String twitterUser) {
         return twitterTimelineService.pullTweetsByUser(twitterUser).stream()
                 .sorted(Comparator.comparing(Tweet::getCreatedAt).reversed())
                 .map(TransformerDTO::transform)
@@ -58,5 +58,8 @@ public class ProfileTweetsPortfolioTweetsMediator implements PortfolioTweetsMedi
                 .collect(Collectors.toList());
     }
 
-
+    @Override
+    public Portfolio updatePortfolio(final Long id, Portfolio portfolio) {
+        return transform(portfolioService.update(transform(portfolioService.getByUser(id),portfolio)));
+    }
 }

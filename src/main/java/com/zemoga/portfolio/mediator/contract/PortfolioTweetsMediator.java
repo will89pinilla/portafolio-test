@@ -8,5 +8,5 @@ import java.util.List;
 public interface PortfolioTweetsMediator {
     List<Portfolio> getAllPortfolio();
     Profile getProfile(final Long id);
-
+    Portfolio updatePortfolio(final Long id, Portfolio portfolio);
 }

@@ -1,5 +1,6 @@
 package com.zemoga.portfolio.domain;
 
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -15,8 +16,9 @@ import javax.persistence.Table;
 @ToString
 @EqualsAndHashCode
 @Entity
+@Builder
 @Table(name = "portfolio")
-public final class Portfolios {
+public final class Portafolio {
 
     @Id
     @GeneratedValue
@@ -36,7 +38,7 @@ public final class Portfolios {
     private final String title;
 
     //Empty constructor for JPA
-    public Portfolios() {
+    public Portafolio() {
         this(null, null, null, null, null);
     }
 }

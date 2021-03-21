@@ -1,10 +1,11 @@
 package com.zemoga.portfolio.service.contract;
 
-import com.zemoga.portfolio.domain.Portfolios;
+import com.zemoga.portfolio.domain.Portafolio;
 
 import java.util.List;
 
 public interface PortfolioService {
-    Portfolios getByUser(final Long id);
-    List<Portfolios> getAllItems();
+    Portafolio getByUser(final Long id);
+    List<Portafolio> getAllItems();
+    Portafolio update(final Portafolio portafolio);
 }
